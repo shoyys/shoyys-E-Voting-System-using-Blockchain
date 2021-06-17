@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="./css/index_css.css" rel="stylesheet">
+</head>
+<script>
+  
+function myFunction() {
+  var age = document.getElementById("age").value;
+  if(document.getElementById("age").value==''){
+    window.confirm("Please Add your age !");
+    return false;
+  }
+  else if(age>=18){
+    window.confirm("You can vote !");
+    return false;
+  }
+  else{
+    window.confirm("You can't vote !");
+    return false;
+  }
+}
+
+</script>
+<body>
+
+<div class="container">
+  <form action="front.html" >
+    <div class="row">
+      <h2 style="text-align:center">Sign Up with this platforms or Manually</h2>
+      <div class="vl">
+        <span class="vl-innertext">or</span>
+      </div>
+
+      <div class="col"></div>
+
+      <div class="col">
+        <div class="hide-md-lg">
+          <p>Or sign in manually:</p>
+        </div>
+
+        
+        <!---------------------------------------------->
+        
+        <input type="text" name="username" placeholder="Username" required>
+        <input id="pass" type="password" name="password" placeholder="Password" required>
+        
+        <input id="age" placeholder="Age" required><br>
+        <br>
+        <button onclick="return myFunction()" aria-required="true" >Check Age</button><br>
+        <br>
+
+        <input type="submit" name="register">
+        <!---------------------------------------------->
+        
+
+      </div>
+    </div>
+  </form>
+</div>
+</body>
+</html>
